@@ -6,6 +6,12 @@
     export default {
         data() {
             return {}
+        },
+        mounted(){
+            console.log(this.$api)
+            this.$api.Common.getMes({id: 1}).then(res => {
+                console.log(res)
+            })
         }
     }
 </script>
