@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">hello</div>
+    <div class="wrapper">hello</div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@
         data() {
             return {}
         },
-        mounted(){
+        mounted() {
             console.log(this.$api)
             this.$api.Common.getMes({id: 1}).then(res => {
                 console.log(res)
@@ -18,6 +18,6 @@
 
 <style scoped>
 .wrapper {
-	color: #222;
+    color: #222;
 }
 </style>

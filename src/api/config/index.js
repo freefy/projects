@@ -70,7 +70,7 @@ export const request = (method, url) => (params = {}, config = {}) => {
 }
 
 const getPromise = (method, url, params, config = {}) => {
-    return new Promise(async (resolve, reject) => {
+    return new Promise(async(resolve, reject) => {
         await request(method, url)(params, config).catch(e => e.response.data)
             .then(res => resolve(res))
             .catch(err => reject(err))

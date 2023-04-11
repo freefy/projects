@@ -103,7 +103,7 @@ async function getPromise(method, url, data, userConfig = {}) {
         return promise
     }
 
-    promise = new Promise(async (resolve, reject) => {
+    promise = new Promise(async(resolve, reject) => {
         const axiosRequest = methodsWithData.includes(method)
             ? axiosInstance[method](url, data, config)
             : axiosInstance[method](url, config)
@@ -181,17 +181,17 @@ function handleReject(error, config) {
         return Promise.reject(error)
     }
     if (error.response) {
-        const { status, data, statusText } = error.response
-        const message = (error && error.message) || (data && data.message)
-        const msgMap = {
-            400: message || '400 error 请求无效',
-            401: '401 error 登录失效，请重新登录！',
-            403: '403 error 对不起，你没有访问权限！',
-            404: '404 Not Found 请检查请求路径是否正确！',
-            500: message || '500 error 后台错误，请联系开发人员！',
-            502: '502 error 平台环境异常',
-            504: '504 error 网关超时，请重试！'
-        }
+        // const { status, data, statusText } = error.response
+        // const message = (error && error.message) || (data && data.message)
+        // const msgMap = {
+        //     400: message || '400 error 请求无效',
+        //     401: '401 error 登录失效，请重新登录！',
+        //     403: '403 error 对不起，你没有访问权限！',
+        //     404: '404 Not Found 请检查请求路径是否正确！',
+        //     500: message || '500 error 后台错误，请联系开发人员！',
+        //     502: '502 error 平台环境异常',
+        //     504: '504 error 网关超时，请重试！'
+        // }
 
         // bkMessage({
         //     limit: 1,
